@@ -4,7 +4,8 @@
         <input type="submit" name="submit"> 
     </form> 
  
-    <?php         function getArmstrong($num) { 
+    <?php         
+    function getArmstrong($num) { 
             $sum=0; 
             $totalDigits=strlen($num); 
             while ($num > 0) { 
@@ -13,7 +14,8 @@
                $num=(int)($num/10); 
             } 
             return $sum; 
-        }         if(isset($_POST["submit"])){             
+        }         
+    if(isset($_POST["submit"])){             
             $num=$_POST["number"];             
             if(empty($num))                 
                 echo "<p>Please Enter a number</p>";             
@@ -29,4 +31,5 @@
                     echo "$i  "; 
                 } 
             } 
-        }     ?> 
+        }     
+        ?> 
