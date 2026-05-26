@@ -19,18 +19,23 @@
                     $result= "Please enter a numberic value<br>";                 
                 else{                     
                     switch($op) {                         
-                    case "+": $result= $num1+$num2;                                     
+                    case "+": 
+                        $result= $num1+$num2;                                     
                     break; 
-                        case "-": $result= $num1-$num2;                                     
+                        case "-": 
+                            $result= $num1-$num2;                                     
                         break;                         
-                        case "*": $result= $num1*$num2;                                     
+                        case "*": 
+                            $result= $num1*$num2;                                     
                         break;                         
-                        case "/": if($num2==0) 
+                        case "/": 
+                            if($num2==0) 
                                     $result= "Division By Zero Error"; 
                                   else 
                                     $result= $num1/$num2;                                   
                                 break; 
-                    }                 } 
+                    }       
+                              } 
                 echo $result; 
             } 
         ?> 
