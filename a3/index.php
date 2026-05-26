@@ -1,3 +1,10 @@
+<form method="post"> 
+        <h1>Login Form</h1><br> 
+        Username : <input type="text" name="uname" required><br> 
+        Password: <input type="password" name="pass" required><br> 
+        <input type="submit" name="login" value="Login"> 
+    </form> 
+
 <?php          
 session_start();         
 if(isset($_SESSION["uname"])){             
@@ -11,9 +18,4 @@ if(isset($_SESSION["uname"])){
          exit(); 
         } 
     ?> 
-    <form method="post"> 
-        <h1>Login Form</h1><br> 
-        Username : <input type="text" name="uname" required><br> 
-        Password: <input type="password" name="pass" required><br> 
-        <input type="submit" name="login" value="Login"> 
-    </form> 
+    
