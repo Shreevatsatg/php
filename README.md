@@ -42,7 +42,7 @@ MySQL Server
 Copy project folder into:
 htdocs (XAMPP)
 Open browser and run:
-http://localhost/foldername/
+http://localhost/LABLIST/
 
 For database programs:
 
