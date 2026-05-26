@@ -1,4 +1,13 @@
-<?php          session_start();         if(isset($_SESSION["uname"])){             header("Location: welcome.php");             exit();         }             else if(isset($_POST["login"])){             $_SESSION["uname"]=$_POST["uname"];             $_SESSION["pass"]=$_POST["pass"];             header("Location: welcome.php");             exit(); 
+<?php          
+session_start();         
+if(isset($_SESSION["uname"])){             
+    header("Location: welcome.php");             
+    exit();         }             
+    else if(isset($_POST["login"])){            
+         $_SESSION["uname"]=$_POST["uname"];             
+         $_SESSION["pass"]=$_POST["pass"];             
+         header("Location: welcome.php");             
+         exit(); 
         } 
     ?> 
     <form method="post"> 

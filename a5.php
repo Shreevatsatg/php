@@ -5,9 +5,13 @@
     </form> 
  
     <?php     if (isset($_POST["submit"])) { 
-        $dob = new DateTime($_POST["dob"]);         $currentDate = new DateTime();         if ($dob > $currentDate) 
-            echo "Please select valid date ";         else { 
+        $dob = new DateTime($_POST["dob"]);         
+        $currentDate = new DateTime();         
+        if ($dob > $currentDate) 
+            echo "Please select valid date ";         
+        else { 
             $age = $dob->diff($currentDate); 
-            echo "<b>Your age is $age->y years $age->m months $age->d days<b>";         } 
+            echo "<b>Your age is $age->y years $age->m months $age->d days<b>";         
+            } 
     }     ?> 
  

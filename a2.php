@@ -13,7 +13,20 @@
                $num=(int)($num/10); 
             } 
             return $sum; 
-        }         if(isset($_POST["submit"])){             $num=$_POST["number"];             if(empty($num))                 echo "<p>Please Enter a number</p>";             else if($num<=0)                 echo "<p>Number must be positive and greater than 0</p>";             else{                 if($num!=getArmstrong($num))                     echo "<p>$num is not armstrong</p>";                 else{                     echo "<p>$num is armstrong number</p><br><h2>Armstrong numbers from 1 to $num</h2><br>";                     for( $i= 1; $i<=$num; $i++ )                         if($i==getArmstrong($i))                             echo "$i  "; 
+        }         if(isset($_POST["submit"])){             
+            $num=$_POST["number"];             
+            if(empty($num))                 
+                echo "<p>Please Enter a number</p>";             
+            else if($num<=0)                 
+                echo "<p>Number must be positive and greater than 0</p>";             
+            else{                 
+                if($num!=getArmstrong($num))                     
+            echo "<p>$num is not armstrong</p>";                 
+        else{                     
+            echo "<p>$num is armstrong number</p><br><h2>Armstrong numbers from 1 to $num</h2><br>";                     
+            for( $i= 1; $i<=$num; $i++ )                         
+                if($i==getArmstrong($i))                             
+                    echo "$i  "; 
                 } 
             } 
         }     ?> 

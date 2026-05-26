@@ -6,9 +6,12 @@
         $data = strtolower($_POST["data"]); 
         $words = str_word_count($data, 1); 
         $frequency = array_count_values($words); 
-                 echo "<h2>Word Frequencies:</h2>";         foreach ($frequency as $word => $count)              echo "$word: $count<br>"; 
+                 echo "<h2>Word Frequencies:</h2>";         
+                 foreach ($frequency as $word => $count)              
+                    echo "$word: $count<br>"; 
                   asort($frequency); 
-        $asort_arr=json_encode($frequency);         echo "Least used word : ".key($frequency)." ".reset($frequency)." times used<br>"; 
+        $asort_arr=json_encode($frequency);         
+        echo "Least used word : ".key($frequency)." ".reset($frequency)." times used<br>"; 
         arsort($frequency); 
         $dsort_arr=json_encode($frequency); 
         echo "Most used word : ".key($frequency)." ".reset($frequency)." times used<br>"; 
@@ -17,5 +20,8 @@
                 <button name=sort value=$dsort_arr>Sort Descending</button> 
               </form>"; 
     }     if(isset($_POST["sort"])) { 
-        $s_arr = json_decode($_POST["sort"], true);         echo "<h2>Sorted Word Frequencies:</h2>";         foreach ($s_arr as $word => $count)              echo "$word: $count<br>"; 
+        $s_arr = json_decode($_POST["sort"], true);         
+        echo "<h2>Sorted Word Frequencies:</h2>";         
+        foreach ($s_arr as $word => $count)              
+            echo "$word: $count<br>"; 
     } ?> 

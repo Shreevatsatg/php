@@ -3,7 +3,8 @@
         <form method="POST"> 
             Enter book number: <input type="number" name="books" required><br><br> 
             Enter book title: <input type="text" name="title" required><br><br> 
-            Enter price: <input type="number" name="price" required><br><br>             Enter quantity: <input type="number" name="quantity" required><br><br> 
+            Enter price: <input type="number" name="price" required><br><br>             
+            Enter quantity: <input type="number" name="quantity" required><br><br> 
             Book Code: <select name="code" required> 
                 <option value="0.15">101</option> 
                 <option value="0.20">102</option> 
@@ -12,7 +13,8 @@
             </select><br><br> 
             <input type="submit" name="generate" value="Generate Bill"> 
         </form> 
-    </pre> <?php if (isset($_POST["generate"])) {     $bookNumber = $_POST["books"]; 
+    </pre> <?php if (isset($_POST["generate"])) {     
+    $bookNumber = $_POST["books"]; 
     $bookTitle = $_POST["title"]; 
     $price = $_POST["price"]; 
     $quantity = $_POST["quantity"]; 
@@ -29,6 +31,11 @@ $bookTitle<br>Price: $price<br>
         $conn = new mysqli("localhost", "root", "", "phpdb");  
         $sql = "INSERT INTO bills VALUES ($bookNumber, '$bookTitle', $price, 
 $quantity, $totalPrice, $discountAmount, $netBillAmount)"; 
-         if ($conn->query($sql))              echo "Bill data stored successfully.";         else              echo "Error";     } catch (Exception $e) {         echo $e; 
+         if ($conn->query($sql))              
+            echo "Bill data stored successfully.";         
+         else              
+            echo "Error";     
+        } catch (Exception $e) {         
+            echo $e; 
     } 
 } ?> 

@@ -8,8 +8,19 @@ index.php
     <button name="action" value="display">Display</button> 
 </form> 
  
-<?php if (isset($_POST["action"])) {     try {         require("methods.php");         $action = $_POST["action"];         if ($action == "sort")              display("SELECT * FROM customers ORDER BY cid");         else if ($action == "display")              display("SELECT * FROM customers");         else              header("Location: $action"); 
-    } catch (Exception $e) {         echo $e; 
+<?php 
+if (isset($_POST["action"])) {     
+    try {         
+        require("methods.php");         
+        $action = $_POST["action"];         
+        if ($action == "sort")              
+            display("SELECT * FROM customers ORDER BY cid");         
+        else if ($action == "display")              
+            display("SELECT * FROM customers");         
+        else              
+            header("Location: $action"); 
+    } catch (Exception $e) {         
+        echo $e; 
     } 
  
 } ?> 

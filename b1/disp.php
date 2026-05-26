@@ -1,7 +1,8 @@
 B1Disp.php 
 <?php 
-    $hobbies = isset($_POST['hobbies']) ? implode(', ', $_POST['hobbies']) : 
-'None';      echo "<h1>Student Registration Details</h1><br>             <b>First Name:</b>".$_POST['fname']."<br> 
+    $hobbies = isset($_POST['hobbies']) ? implode(', ', $_POST['hobbies']) : 'None';      
+    echo "<h1>Student Registration Details</h1><br>             
+<b>First Name:</b>".$_POST['fname']."<br> 
             <b>Last Name:</b> ".$_POST['lname']."<br> 
             <b>Address:</b> ".$_POST['address']." <br> 
             <b>E-Mail:</b> ".$_POST['email']." <br> 
