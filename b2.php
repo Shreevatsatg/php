@@ -1,20 +1,26 @@
 <form method="POST"> 
-    Enter number of rows: <input type="number" name="rows" required><br><br>     Enter number of columns: <input type="number" name="cols" required><br><br> 
+    Enter number of rows: <input type="number" name="rows" required><br><br>     
+    Enter number of columns: <input type="number" name="cols" required><br><br> 
     <input type="submit" name="generate" value="Generate Matrices"> 
-</form> <?php     if (isset($_POST["generate"])) { 
+</form> 
+<?php     
+    if (isset($_POST["generate"])) { 
         $rows = $_POST["rows"]; 
         $cols = $_POST["cols"]; 
  
         echo "<form method=post>  
                 <input type=hidden name=rows value=$rows> 
                 <input type=hidden name=cols value=$cols> 
-                <h3>Matrix1</h3>                 <table border=1>"; 
+                <h3>Matrix1</h3>                 
+                <table border=1>"; 
                     for ($i = 1; $i <= $rows; $i++) {                         
                         echo "<tr>";                         
                         for ($j = 1; $j <= $cols; $j++)                              
                             echo "<td><input type=number name=a$i$j required></td>"; 
                         echo "</tr>"; 
-                    }         echo "</table><br>               <h3>Matrix2</h3>               <table border=1>";                     
+                    }         echo "</table><br>               
+                    <h3>Matrix2</h3>               
+                    <table border=1>";                     
                     for ($i = 1; $i <= $rows; $i++) {                    
                         echo "<tr>"; 
                       for ($j = 1; $j <= $cols; $j++) {                            
@@ -23,12 +29,16 @@
                         echo "</tr>"; 
                     }         
                     echo "</table> 
-              <input type=submit name=action value=sum>               <input type=submit name=action value=product><br><br> 
+              <input type=submit name=action value=sum>               
+              <input type=submit name=action value=product><br><br> 
               </form>"; 
-} if (isset($_POST["action"])) {     $rows = $_POST["rows"];     $cols = $_POST["cols"];    
+} if (isset($_POST["action"])) {     
+    $rows = $_POST["rows"];     
+    $cols = $_POST["cols"];    
  switch ($_POST["action"]) {         
     case "sum":  
-                    echo "<h3>Sum of Matrices</h3>                           <table border='1'>";                                 
+                    echo "<h3>Sum of Matrices</h3>                           
+                    <table border='1'>";                                 
                     for ($i = 1; $i <= $rows; $i++) {                                     
                         echo "<tr>";                                     
                         for ($j = 1; $j <= $cols; $j++) { 
