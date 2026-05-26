@@ -2,7 +2,8 @@
 session_start();         
 if(isset($_SESSION["uname"])){             
     header("Location: welcome.php");             
-    exit();         }             
+    exit();         
+    }             
     else if(isset($_POST["login"])){            
          $_SESSION["uname"]=$_POST["uname"];             
          $_SESSION["pass"]=$_POST["pass"];             
