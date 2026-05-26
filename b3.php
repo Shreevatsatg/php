@@ -1,5 +1,6 @@
  
-<form method="post">     Enter distance 1 <br> 
+<form method="post">     
+    Enter distance 1 <br> 
     feet: <input type="number" name="d1_feet" required><br>     
     inches: <input type="number" name="d1_inches" required><br><br>     
     Enter distance 2 <br>     
@@ -12,7 +13,8 @@
      public function __construct($feet, $inches) { 
         $this->feet = $feet; 
         $this->inches = $inches; 
-    }      public function add($other) { 
+    }      
+    public function add($other) { 
         $totalInches = ($this->feet + $other->feet) * 12 + ($this->inches + $other->inches);         
         return new Distance(intval($totalInches / 12), $totalInches % 12);     
         }      

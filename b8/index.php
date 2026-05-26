@@ -14,7 +14,8 @@
         Enter room number: <input type="text" name="rNo"> 
         <button name="action" value="Booked">CheckIn</button><br><br> 
         <button name="action" value="Available">CheckOut</button> 
-    </form> <?php     
+    </form> 
+    <?php     
     try { 
         require("method.php");         
         if (isset($_POST["action"])){             
@@ -22,7 +23,8 @@
             if($action=="add"){                 
                 echo $_POST["roomNo"];                 
                 addHotel($_POST["roomNo"], $_POST["roomType"], $_POST["capacity"]); 
-            }             else{ 
+            }             
+            else{ 
                 $currentStatus=getStatus($_POST['rNo']);                 
                 if($currentStatus==$action)                     
                     echo "Room is already $action.";                 

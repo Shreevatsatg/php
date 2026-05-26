@@ -4,7 +4,8 @@
      function addHotel($roomNo,$roomType,$capacity){         
         global $con; 
         $sql = "INSERT INTO hotel VALUES($roomNo, '$roomType', $capacity,'Available')"; 
-        $con->query($sql);         echo "Hotel added successfully."; 
+        $con->query($sql);         
+        echo "Hotel added successfully."; 
     }      function display($status){         
         global $con; 
         $result = $con->query("SELECT * FROM hotel WHERE status='$status'");         
@@ -32,5 +33,6 @@
             $result=$result->fetch_array();             
             return $result[0]; 
         }         return "Invalid"; 
-    } ?> 
+    } 
+    ?> 
  

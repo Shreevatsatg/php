@@ -16,13 +16,14 @@
                  try { 
                     $con = new mysqli("localhost", "root", "", "phpdb"); 
                     $res = $con->query("insert into feedback values ('$name', '$email', '$subject', '$message')");                     
-if ($res)                         
-echo "Feedback submitted successfully.";                     
-else                         
-    echo "Error while submitting feedback."; 
-                } 
+                    if ($res)                         
+                        echo "Feedback submitted successfully.";                     
+                     else                         
+                        echo "Error while submitting feedback."; 
+                        } 
                 catch (Exception $e) {                     
                     echo $e->getMessage(); 
                 } 
-            }         ?> 
+            }         
+            ?> 
  
