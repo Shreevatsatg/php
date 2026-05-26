@@ -4,7 +4,8 @@
         <input type="submit" value="Calculate age" name="submit"><br> 
     </form> 
  
-    <?php     if (isset($_POST["submit"])) { 
+    <?php     
+    if (isset($_POST["submit"])) { 
         $dob = new DateTime($_POST["dob"]);         
         $currentDate = new DateTime();         
         if ($dob > $currentDate) 
@@ -13,5 +14,6 @@
             $age = $dob->diff($currentDate); 
             echo "<b>Your age is $age->y years $age->m months $age->d days<b>";         
             } 
-    }     ?> 
+    }     
+    ?> 
  

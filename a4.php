@@ -11,7 +11,8 @@
         <input type="submit" value="Calculate" name="submit"> 
  
         <?php 
-        if(isset($_POST["submit"])){                 $num1=$_POST["num1"]; 
+        if(isset($_POST["submit"])){                 
+            $num1=$_POST["num1"]; 
                 $num2=$_POST["num2"]; 
                 $op=$_POST["operator"]; 
                 $result="";                 
@@ -21,21 +22,21 @@
                     switch($op) {                         
                     case "+": 
                         $result= $num1+$num2;                                     
-                    break; 
-                        case "-": 
-                            $result= $num1-$num2;                                     
+                        break; 
+                    case "-": 
+                        $result= $num1-$num2;                                     
                         break;                         
-                        case "*": 
-                            $result= $num1*$num2;                                     
+                    case "*": 
+                        $result= $num1*$num2;                                     
                         break;                         
-                        case "/": 
-                            if($num2==0) 
-                                    $result= "Division By Zero Error"; 
-                                  else 
-                                    $result= $num1/$num2;                                   
-                                break; 
-                    }       
-                              } 
+                    case "/": 
+                        if($num2==0) 
+                            $result= "Division By Zero Error"; 
+                        else 
+                            $result= $num1/$num2;                                   
+                            break; 
+                        }       
+                    } 
                 echo $result; 
             } 
         ?> 
