@@ -1,4 +1,3 @@
-B1Disp.php 
 <?php 
     $hobbies = isset($_POST['hobbies']) ? implode(', ', $_POST['hobbies']) : 'None';      
     echo "<h1>Student Registration Details</h1><br>             
