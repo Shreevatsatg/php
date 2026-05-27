@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
     if (empty($num))
         echo "<p>Please Enter a number</p>";
     else if ($num <= 0)
-        echo "<p>Number must be positive and greater than 0</p>";
+        echo "<p>Number must be positive (greater than 0)</p>";
     else {
         if ($num != getArmstrong($num))
             echo "<p>$num is not armstrong</p>";
