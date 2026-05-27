@@ -1,4 +1,5 @@
 <?php
+/*implode Converts an array into a string. implode(separator, array)*/
 $hobbies = isset($_POST['hobbies']) ? implode(', ', $_POST['hobbies']) : 'None';
 echo "<h1>Student Registration Details</h1><br>             
 <b>First Name:</b>" . $_POST['fname'] . "<br> 
